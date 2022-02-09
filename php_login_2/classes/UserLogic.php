@@ -58,10 +58,6 @@ class UserLogic
     // SQLの結果を返す
     $sql = 'SELECT * FROM gs_users WHERE email = :email';
 
-    // emailを配列に入れる
-    // $arr = [];
-    // $arr[] = $email;
-
     try {
       $stmt = connect()->prepare($sql);
       $stmt->bindValue(':email', $email, PDO::PARAM_STR);
