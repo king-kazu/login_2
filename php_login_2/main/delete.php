@@ -14,14 +14,6 @@ $stmt = $pdo->prepare('DELETE FROM gs_users WHERE id = :id');
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);
 $status = $stmt->execute();
 
-
-//リダイレクト関数: redirect($file_name)
-// function redirect($file_name)
-// {
-//   header('Location: ' . $file_name );
-//   exit();
-// }
-
 if($status === false) {
     sql_error($stmt);
 } else {
